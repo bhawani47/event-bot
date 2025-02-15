@@ -2,6 +2,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const cron = require('node-cron');
 const fs = require('fs');
 const path = require('path');
+const express = require('express');
+const app = express();
 
 // bot token - remember to move to env file later!
 const token = '7647155816:AAFaBKPz9sC6DOhKell6Vcdn9dUdnDQVygc'; // Enter Your TELEGRAM_BOT_TOKEN here i used my own 
@@ -120,3 +122,9 @@ cron.schedule('0 * * * *', () => {
 console.log('Bot started - ctrl+c to exit');
 fetchEvents();
 // console.log('Debug mode:', process.env.DEBUG);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
