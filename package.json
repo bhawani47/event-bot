@@ -1,0 +1,13 @@
+{
+  "name": "event-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for event recommendations and notifications",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "node-cron": "^3.0.0"
+  }
+}
